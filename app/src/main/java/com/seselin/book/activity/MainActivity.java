@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.seselin.book.R;
 import com.seselin.book.bean.BookSetting;
 import com.seselin.book.tag.EventBusTag;
+import com.seselin.book.util.ApkTools;
 import com.seselin.book.util.BookJsoup;
 import com.seselin.book.util.InputUtil;
 import com.seselin.book.util.LogUtil;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApkTools.setStatusBarColor(this, R.color.colorPrimary);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         LogUtil.getInstance().initText(tvLog);
